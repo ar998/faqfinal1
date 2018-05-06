@@ -5,7 +5,10 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
+
+
                     <div class="card-header">Create Question</div>
+
                     <div class="card-body">
                         @if($edit === FALSE)
                         {!! Form::model($question, ['action' => 'QuestionController@store']) !!}
@@ -20,6 +23,7 @@
                         </button>
                         {!! Form::close() !!}
                     </div>
+
 
                 </div>
             </div>

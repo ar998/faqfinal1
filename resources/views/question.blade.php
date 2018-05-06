@@ -11,17 +11,24 @@
 
                         {{$question->body}}
                     </div>
-                    <div class="card-footer">
-                        <a class="btn btn-primary float-right"
-                           href="{{ route('questions.edit',['id'=> $question->id])}}">
-                            Edit Question
-                        </a>
 
-                        {{ Form::open(['method'  => 'DELETE', 'route' => ['questions.destroy', $question->id]])}}
-                        <button class="btn btn-danger float-right mr-2" value="submit" type="submit" id="submit">Delete
-                        </button>
-                        {!! Form::close() !!}
-                    </div>
+                    @can('isAdmin')
+
+                        <div class="card-footer">
+                            <a class="btn btn-primary float-right"
+                               href="{{ route('questions.edit',['id'=> $question->id])}}">
+                                Edit Question
+                            </a>
+
+                            {{ Form::open(['method'  => 'DELETE', 'route' => ['questions.destroy', $question->id]])}}
+                            <button class="btn btn-danger float-right mr-2" value="submit" type="submit" id="submit">
+                                Delete
+                            </button>
+                            {!! Form::close() !!}
+                        </div>
+
+                    @endcan
+
                 </div>
             </div>
 

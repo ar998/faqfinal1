@@ -29,11 +29,4 @@ class HomeController extends Controller
         return view('home')->with('questions', $questions);
     }
 
-    public function admin(Request $req){
-        return view('middleware')->withMessage("Admin");
-    }
-
-    public function member(Request $req){
-        return view('middleware')->withMessage("Member");
-    }
 }
