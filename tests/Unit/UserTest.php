@@ -13,12 +13,12 @@ class UserTest extends TestCase
      *
      * @return void
      */
-    public function testSave()
+   /* public function testSave()
     {
         $user = factory(\App\User::class)->make();
 
         $this->assertTrue($user->save());
-    }
+    } */
 
     public function testQuestions()
     {
