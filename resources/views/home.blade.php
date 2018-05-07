@@ -20,7 +20,6 @@
                                                 <small class="text-muted">
                                                     Updated: {{ $question->created_at->diffForHumans() }}
                                                     Answers: {{ $question->answers()->count() }}
-
                                                 </small>
                                             </div>
                                             <div class="card-body">

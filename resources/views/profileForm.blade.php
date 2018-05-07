@@ -24,6 +24,10 @@
                             {!! Form::label('body', 'Body') !!}
                             {!! Form::text('body', $profile->body, ['class' => 'form-control','required' => 'required']) !!}
                         </div>
+                            <div class="form-group">
+                                {!! Form::label('type', 'User Type') !!}
+                                {!! Form::text('type', $profile->type, ['class' => 'form-control', 'readonly' => 'true']) !!}
+                            </div>
                         <button class="btn btn-success float-right" value="submit" type="submit" id="submit">Save
                         </button>
                         {!! Form::close() !!}
